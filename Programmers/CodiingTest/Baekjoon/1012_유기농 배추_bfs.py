@@ -9,7 +9,7 @@ def bfs(y, x):
             ny = now[0] + dy[i]
             if(0 <= ny < N) and (0 <= nx < M) and maps[ny][nx] == 1: # 범위에 있고 방문 하지 않은 곳이면
                 maps[ny][nx] = -1
-                queue.append((ny, nx));
+                queue.append((ny, nx))
 
 
 T = int(input())
