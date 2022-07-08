@@ -28,13 +28,15 @@ def dijkstra(start):
     while q: # 큐가 비어있지 않다면
         # 가장 최단 거리가 짧은 노드에 대한 정보 꺼내기
         dist, now = heapq.heappop(q)
-        # 현재 노드가 이미 처리된 적이 있는 노드라면 무시
+        # 꺼낸 원소의 거리가 현재 테이블에 기록되어 있는 거리보다 크다면
+        # 방문 처리돼 있는 노드라고 간주 할 수 있으므로 무시하면 된다.
+        # (현재 노드가 이미 처리된 적이 있는 노드라면 무시)
         if distance[now] < dist:
             continue
         # 현재 노드와 연결된 다른 인접한 노드들을 확인
         for next in graph[now]:
             # cost = 현재 확인하고 있는 노드의 거리 값 + 그 노드와 인접한 다른 노드의 거리값
-            cost = dist + next[1]   # dist는 저장 되어있는 최단경로, next[1]은 거리 값
+            cost = dist + next[1]   # dist는 저장 되어있는 최단경로, next[1]은 다른 노드로 가는 거리 값
             # 현재 노드를 거쳐서, 다른 노드로 이동하는 거리가 더 짧은 경우
             if cost < distance[next[0]]:
                 distance[next[0]] = cost    # 작은 비용으로 거리를 갱신한다
