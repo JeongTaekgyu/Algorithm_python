@@ -7,7 +7,7 @@ def solution(array, commands):
             tmp.append(array[j])
         tmp.sort()
         answer.append(tmp[com[2]-1])
-        tmp.clear()
+        tmp.clear() # 리스트의 모든 요소 제거
 
     return answer
 
