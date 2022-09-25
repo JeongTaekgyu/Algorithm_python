@@ -72,7 +72,7 @@ def dfs_recursion(adjacent_graph, cur_node, visited_array):
     # 현재 방문한 노드를 visited 에 추가한다.
     visited_array.append(cur_node)
 
-    # 현재 방문한 노드와 인접한 노드 중 방문하지 않은 노드에 방문한다.
+    # (현재 방문한 노드와) 인접한 노드 중 방문하지 않은 노드에 방문한다.
     for adjacent_node in adjacent_graph[cur_node]:
         #print(adjacent_node)
         if adjacent_node not in visited_array:

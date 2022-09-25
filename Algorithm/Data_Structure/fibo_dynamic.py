@@ -1,4 +1,4 @@
-input = 50
+input = 100
 
 # memo 라는 변수에 Fibo(1)과 Fibo(2) 값을 저장해놨습니다!
 memo = {
